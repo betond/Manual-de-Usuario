@@ -9,21 +9,21 @@
   <style>
     html {
       color: #1a1a1a;
-      background-color: gr;
+      background-color: #fdfdfd;
     }
     body {
       margin: 0 auto;
-      max-width: 80em;
-      padding-left: 0px;
-      padding-right: 0px;
-      padding-top: 0px;
-      padding-bottom: 0px;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
       hyphens: auto;
       overflow-wrap: break-word;
       text-rendering: optimizeLegibility;
       font-kerning: normal;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: 600px) {
       body {
         font-size: 0.9em;
         padding: 12px;
@@ -38,7 +38,7 @@
       }
       body {
         background-color: transparent;
-        color: blueviolet;
+        color: black;
         font-size: 12pt;
       }
       p, h2, h3 {
@@ -821,9 +821,9 @@ tronco común o en entero con el decimal que representa la carera técnica
 a la que pertenece:</p>
 <ul>
 <li><p>#.0: Telecomunicaciones.</p></li>
-<li><p>#.1: Diagnostico.</p></li>
-<li><p>#.2: Mecatronica.</p></li>
-<li><p>#.3: Metrologia.</p></li>
+<li><p>#.1: Metrología Y Control De Calidad.</p></li>
+<li><p>#.2: Diagnostico y Mejoramiento Ambiental.</p></li>
+<li><p>#.3: Mecatrónica.</p></li>
 </ul></li>
 </ul>
 <p>Donde # representa uno de los siguiente números: [3,4,5,6]</p>
@@ -856,9 +856,11 @@ continuación:</p>
 menú donde nos permite editar profesores <a href="#EditProf"
 data-reference-type="ref" data-reference="EditProf">4.4.1</a>, aulas <a
 href="#EditAula" data-reference-type="ref"
-data-reference="EditAula">4.4.2</a> o unidades de aprendizaje <a
+data-reference="EditAula">4.4.2</a>, unidades de aprendizaje <a
 href="#EditUAS" data-reference-type="ref"
-data-reference="EditUAS">4.4.3</a>. Este menú se muestra a
+data-reference="EditUAS">4.4.3</a> o configurar el algoritmo genético <a
+href="#AGCONF-EXP" data-reference-type="ref"
+data-reference="AGCONF-EXP">4.6</a>. Este menú se muestra a
 continuación:</p>
 <figure id="fig:EditDel2">
 <p><img src="Secciones/SS/Admin/Editar-Del/Editar-2.png" alt="image" />
@@ -1026,9 +1028,9 @@ tronco común o en entero con el decimal que representa la carera técnica
 a la que pertenece:</p>
 <ul>
 <li><p>#.0: Telecomunicaciones.</p></li>
-<li><p>#.1: Diagnostico.</p></li>
-<li><p>#.2: Mecatronica.</p></li>
-<li><p>#.3: Metrologia.</p></li>
+<li><p>#.1: Metrología Y Control De Calidad.</p></li>
+<li><p>#.2: Diagnostico y Mejoramiento Ambiental.</p></li>
+<li><p>#.3: Mecatrónica.</p></li>
 </ul></li>
 </ul>
 <p>6.Unidad_de_Aprendizaje- Al realizar las modificaciones de la
@@ -1127,95 +1129,222 @@ src="Secciones/SS/Admin/Bloquear-Desbloquear/BloqDes-DesCorrec.png"
 alt="image" /> <span id="fig:Desbloqueo"
 label="fig:Desbloqueo"></span></p>
 </figure>
-<h2 id="algoritmo-genético---ag">Algoritmo Genético - AG</h2>
+<h2 id="AGCONF-EXP">Algoritmo Genético - AG</h2>
+<p>El algoritmo genético es el modulo principal del sistema, ya que este
+se encarga del proceso de generación de horarios siguiendo la
+configuración definida por el administrador. A continuación se describen
+los procesos para la generación de horarios y exportado de estos.</p>
 <h3 id="generación-de-horarios-y-configuración-del-ag">Generación de
 horarios y configuración del AG</h3>
+<p>Antes de generar horarios en necesario configurar los parámetros
+sobre los que trabajará el algoritmo, para esto siga los siguientes
+pasos:</p>
+<p>1.- Seleccione el botón “Generar Horarios” en la barra superior o en
+el menú. A continuación se muestra la pantalla del menú principal con
+las opciones de acceso señaladas:</p>
 <figure id="fig:GenH0">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/0-GenHorario.png"
 alt="image" /> <span id="fig:GenH0" label="fig:GenH0"></span></p>
 </figure>
+<p>Posteriormente el sistema mostrara una notificación donde da un
+resumen de lo que se puede realizar en esa sección, esto se muestra a
+continuación:</p>
 <figure id="fig:GenH1">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/1-GenHorario.png"
 alt="image" /> <span id="fig:GenH1" label="fig:GenH1"></span></p>
 </figure>
-<figure id="fig:GenH2">
-<p><img src="Secciones/SS/Admin/GenerarHorarios/2-GenHorario.png"
-alt="image" /> <span id="fig:GenH2" label="fig:GenH2"></span></p>
-</figure>
-<figure id="fig:GenH3">
-<p><img src="Secciones/SS/Admin/GenerarHorarios/3-GenHorario.png"
-alt="image" /> <span id="fig:GenH3" label="fig:GenH3"></span></p>
-</figure>
+<p>2.- Al seleccionar “OK” en la sección anterior el sistema muestra el
+menú donde nos permite editar profesores <a href="#EditProf"
+data-reference-type="ref" data-reference="EditProf">4.4.1</a>, aulas <a
+href="#EditAula" data-reference-type="ref"
+data-reference="EditAula">4.4.2</a>, unidades de aprendizaje <a
+href="#EditUAS" data-reference-type="ref"
+data-reference="EditUAS">4.4.3</a> o configurar el algoritmo genético.
+Este menú se muestra a continuación:</p>
+<p><strong>Importante:</strong> Es necesario que la lista de profesores,
+aulas y unidades de aprendizaje ya contengan la información que el
+algoritmo utilizara para generar los horarios.</p>
+<p>3.- Para configurar las variables de funcionamiento del algoritmo es
+necesario seleccionar el botón “Generar Horarios”.</p>
 <figure id="fig:GenH4">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/4-GenHorario.png"
 alt="image" /> <span id="fig:GenH4" label="fig:GenH4"></span></p>
 </figure>
+<p>4.- El sistema muestra en pantalla los campos de configuración del
+algoritmo genético, como se muestra a continuación:</p>
 <figure id="fig:GenH5">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/5-GenHorario.png"
 alt="image" /> <span id="fig:GenH5" label="fig:GenH5"></span></p>
 </figure>
-<figure id="fig:GenH6">
-<p><img src="Secciones/SS/Admin/GenerarHorarios/6-GenHorario.png"
-alt="image" /> <span id="fig:GenH6" label="fig:GenH6"></span></p>
-</figure>
-<figure id="fig:GenH7">
-<p><img src="Secciones/SS/Admin/GenerarHorarios/7-GenHorario.png"
-alt="image" /> <span id="fig:GenH7" label="fig:GenH7"></span></p>
-</figure>
-<figure id="fig:GenH8">
-<p><img src="Secciones/SS/Admin/GenerarHorarios/8-GenHorario.png"
-alt="image" /> <span id="fig:GenH8" label="fig:GenH8"></span></p>
-</figure>
+<p>5.- Al insertar la información en los campos se debe seleccionar el
+botón “Generar Horarios”, como se muestra a continuación:</p>
+<p><strong>Importante:</strong> La información de configuración debe
+seguir el siguiente formato y consideraciones: <strong>Ejecución del
+algoritmo</strong></p>
+<ul>
+<li><p>Número Máximo De Generaciones: Número entero que representa la
+cantidad de veces que se repetirá el algoritmo. Se recomienda un numero
+superior a 500 e inferior a 1000. Estos nos permiten obtener soluciones
+medianamente aceptable en poco tiempo.</p></li>
+<li><p>Probabilidad de Cruce y Mutación: Son operaciones que permiten
+que los diferentes horarios generados puedan modificar algunos de sus
+parámetros para mejorar aumentar la variabilidad de las soluciones. Al
+ser probabilidades estos deben representar una parte de un 100% por lo
+tanto se configuran valores complementarios que sumen 10. En la
+siguiente tabla se muestran las parejas de valores recomendados para
+maximizar la efectividad del algoritmo:</p>
+<div id="Tab:ValoresRecomendados">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Probabilidad</th>
+<th colspan="5" style="text-align: center;">Pares de valores</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Mutación</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">7</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Cruzamiento</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><span id="Tab:ValoresRecomendados"
+label="Tab:ValoresRecomendados"></span></p></li>
+<li><p>Periodo: Se debe seleccionar el periodo de clases del que se
+desea obtener los horarios. Periodo 1 genera horarios de primer, tercero
+y quinto semestre. Periodo 2 genera horarios de segundo, cuarto y sexto
+semestre.</p></li>
+</ul>
+<p><strong>Generación de horarios</strong></p>
+<ul>
+<li><p>Turno: Seleccionar el Turno para el que se desea se generen los
+horarios.</p></li>
+<li><p>Número de Grupos de 1er o 2do Semestre: Número entero que
+representa los grupos que desea que se generen para primer o segundo
+semestre según corresponda al periodo configurado.</p></li>
+<li><p>Número de Grupos de 3er o 4to Semestre: Al contar con cuatro
+carreras técnicas en las instalaciones es necesario especificar el
+número de grupos para cada una de estas.</p>
+<ul>
+<li><p>Grupos de Telecomunicaciones: Número de grupos que se desean del
+semestre y carrera al que pertenece el campo.</p></li>
+<li><p>Grupos de Metrologia Y Control De Calidad: Número de grupos que
+se desean del semestre y carrera al que pertenece el campo.</p></li>
+<li><p>Grupos de Diagnostico y Mejoramiento Ambiental: Número de grupos
+que se desean del semestre y carrera al que pertenece el campo.</p></li>
+<li><p>Grupos de Mecatrónica: Número de grupos que se desean del
+semestre y carrera al que pertenece el campo.</p></li>
+</ul></li>
+<li><p>Número de Grupos de 5to o 6to Semestre: Al contar con cuatro
+carreras técnicas en las instalaciones es necesario especificar el
+número de grupos para cada una de estas.</p>
+<ul>
+<li><p>Grupos de Telecomunicaciones: Número de grupos que se desean del
+semestre y carrera al que pertenece el campo.</p></li>
+<li><p>Grupos de Metrologia Y Control De Calidad: Número de grupos que
+se desean del semestre y carrera al que pertenece el campo.</p></li>
+<li><p>Grupos de Diagnostico y Mejoramiento Ambiental: Número de grupos
+que se desean del semestre y carrera al que pertenece el campo.</p></li>
+<li><p>Grupos de Mecatrónica: Número de grupos que se desean del
+semestre y carrera al que pertenece el campo.</p></li>
+</ul></li>
+</ul>
 <figure id="fig:GenH9">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/9-GenHorario.png"
 alt="image" /> <span id="fig:GenH9" label="fig:GenH9"></span></p>
 </figure>
+<p>Si la información ingresada es correcta, se realiza la ejecución del
+algoritmo genético, el sistema mostrar la notificación que se presenta a
+continuación:</p>
 <figure id="fig:GenH10">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/10-GenHorario.png"
 alt="image" /> <span id="fig:GenH10" label="fig:GenH10"></span></p>
 </figure>
+<p>Al finalizar la ejecución del algoritmo y la generación de horarios
+el sistema notificara al usuario mostrando la notificación que se
+presenta a continuación:</p>
 <figure id="fig:GenH11">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/11-GenHorario.png"
 alt="image" /> <span id="fig:GenH11" label="fig:GenH11"></span></p>
 </figure>
+<p><strong>NOTA:</strong> Para ver los horarios generados y exportarlos
+revisar la siguiente sección:</p>
 <h3
 id="visualización-de-versiones-y-exportado-de-horarios">Visualización de
 versiones y exportado de horarios</h3>
+<p>Para Visualizar las versiones de horarios generados y Posteriormente
+exportarlos es necesario acceder al menú “Ver o Registrar”. Para esto es
+necesario seguir los siguientes pasos:</p>
+<p>1.- Seleccione el botón “Ver o Registrar” en la barra superior o en
+el menú. A continuación se muestra la pantalla del menú principal con
+las opciones de acceso señaladas:</p>
 <figure id="figVV:VV0">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-0.png"
 alt="image" /> <span id="figVV:VV0" label="figVV:VV0"></span></p>
 </figure>
+<p>Posteriormente el sistema mostrara una notificación donde da un
+resumen de lo que se puede realizar en esa sección, esto se muestra a
+continuación:</p>
 <figure id="fig:VV1">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-1.png"
 alt="image" /> <span id="fig:VV1" label="fig:VV1"></span></p>
 </figure>
+<p>2.- Al seleccionar “OK” en la sección anterior el sistema muestra el
+menú donde nos permite ver o registrar profesores, aulas, unidades de
+aprendizaje o ver horarios. Este menú se muestra a continuación:</p>
 <figure id="fig:VV2">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-2.png"
 alt="image" /> <span id="fig:VV2" label="fig:VV2"></span></p>
 </figure>
+<p><strong>Importante:</strong> Es necesario que se haya ejecutado de
+forma correcta el algoritmo al menos una vez.</p>
+<p>3.- Al seleccionar el botón “Horario” el sistema mostrar el siguiente
+menú:</p>
 <figure id="fig:VV3">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-3.png"
 alt="image" /> <span id="fig:VV3" label="fig:VV3"></span></p>
 </figure>
-<figure id="fig:VV4">
-<p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-4.png"
-alt="image" /> <span id="fig:VV4" label="fig:VV4"></span></p>
-</figure>
+<p>4.- Al seleccionar el botón “Mostrar” el sistema muestra las
+versiones existentes en el sistema, en orden descendente desde la más
+reciente hasta la ams antigua. Como se observa a continuación:</p>
 <figure id="fig:VV5">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-5.png"
 alt="image" /> <span id="fig:VV5" label="fig:VV5"></span></p>
 </figure>
+<p><strong>Importante:</strong> La versión seleccionada por defecto es
+la más reciente, si se selecciona una distinta a esta, el sistema
+configurara como la versión a exportar.</p>
+<p><strong>Exportar:</strong> Para poder ver el horario general de
+clases resultante de la ejecución del algoritmo genético es necesario
+exportarlo a formato pdf. Para esto se debe continuar con los siguientes
+pasos:</p>
+<p>5.- Para poder exportar el horario general de clases y determinar si
+es una solución viable demos seleccionar el botón “Exportar”. Como se
+presenta a continuación:</p>
 <figure id="fig:VV6">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-6.png"
 alt="image" /> <span id="fig:VV6" label="fig:VV6"></span></p>
 </figure>
+<p>6.- El sistema exportara la versión de horarios seleccionada a
+formato pdf. Posteriormente lo mostrara en otra pestaña del navegador
+web y lo descargara en el dispositivo desde el que se accede al sistema
+como se presenta a continuación:</p>
 <figure id="fig:VV7">
 <p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-7.png"
 alt="image" /> <span id="fig:VV7" label="fig:VV7"></span></p>
-</figure>
-<figure id="fig:VV8">
-<p><img src="Secciones/SS/Admin/GenerarHorarios/VerVersiones-8.png"
-alt="image" /> <span id="fig:VV8" label="fig:VV8"></span></p>
 </figure>
 <figure>
 <p><img src="Secciones/img/veladora.jpg" alt="image" /> <img
